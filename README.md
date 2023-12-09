@@ -1,1 +1,1 @@
-"# py_password_manager" 
+"# py_ethereum_wallet_manager" 
