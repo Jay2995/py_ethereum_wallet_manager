@@ -2,6 +2,8 @@ from tkinter import *
 from wallet_generator import *
 import csv;
 from tkinter import messagebox;
+import pyperclip;
+
 BLACK = '#000000';
 GREEN = "#355E3B";
 
@@ -14,6 +16,7 @@ def update_labels():
     wallet_info = generate_ethereum_wallet();
     wallet_address_result.config(text=wallet_info["address"]);
     wallet_PK_result.config(text=wallet_info["private_key"]);
+    pyperclip.copy(wallet_PK_result.cget('text'));
 
 def clear():
     wallet_address_result.config(text='');
