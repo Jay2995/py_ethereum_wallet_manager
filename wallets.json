@@ -1,8 +1,8 @@
 {
     "a": {
-        "wallet usecase": "w",
-        "wallet address": "0x01ff5b0b8C623933A3B715e96b0728BD67f47D14",
-        "wallet private-key": "0xd3710283cc2959b436eecff78cc81769720765489c398e4801299492b8400430"
+        "wallet usecase": "1",
+        "wallet address": "0xf5DEDb886355faEAac2685CeAb1C2CE3B989f52E",
+        "wallet private-key": "0xd5dad23cab0ba6a4b7d8706e623606849c086bb155707dd9e96ef3436e580f2a"
     },
     "b": {
         "wallet usecase": "b",
@@ -38,5 +38,15 @@
         "wallet usecase": "niggering",
         "wallet address": "0xf284Af63b1e256D92185f68aDA273E950Fd59eFF",
         "wallet private-key": "0xff3139dadbf8f89548e533e2bdf3367bad651db7ee547c56550d3e708569846f"
+    },
+    "1": {
+        "wallet usecase": "1",
+        "wallet address": "0x9eB6cEafBdf5C81F42D58Eb674122DEE0EBc8112",
+        "wallet private-key": "0xb3c8c37a59db1bb2da2152a6e43fcbbc5352bcba0008785b957bd44fc79eaab6"
+    },
+    "crypto millionaire": {
+        "wallet usecase": "wallet that contains all 10000 eth saved,wallet that contains all 10000 eth saved,wallet that contains all 10000 eth saved,wallet that contains all 10000 eth saved,wallet that contains all 10000 eth saved,",
+        "wallet address": "0x729a202C0292142EA75c2d624C441bA8D7Ea8574",
+        "wallet private-key": "0x4074cd561e8db7c4a0cec1a10fbadef47526658d6058f76915aa48a571d3f394"
     }
 }

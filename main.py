@@ -60,6 +60,25 @@ def add_wallet():
         
         finally:
             clear();
+###SEARCH#####
+
+def search_wallet():
+    wallet_name = wallet_name_entry.get();
+    try:
+        with open("wallets.json") as data_file:
+            data = json.load(data_file);
+    except FileNotFoundError:
+        messagebox.showinfo(title="File not found", message="No wallets have been added to database")
+    else:  
+        
+        if wallet_name in data:
+            dictionary = data[wallet_name];
+            usecase = dictionary["wallet usecase"];
+            address = dictionary["wallet address"];
+            private_key = dictionary["wallet private-key"];
+            messagebox.showinfo(title=wallet_name, message=f"Wallet usecase: {usecase},\nWallet address: {address},\nPrivateKey: {private_key}");
+        else:
+            messagebox.showinfo(title="Error", message="Wallet not found, please try again")
 
 # ---------------------------- UI SETUP ------------------------------- #
 
@@ -101,6 +120,10 @@ generate_button.grid(column=0, row=6);
 
 add_button = Button(text="Add", width=36, command=add_wallet);
 add_button.grid(column=1, row=6);
+###search button
+search_button = Button(text="Search", width=5, command=search_wallet);
+search_button.grid(column=3, row = 2);
+
 #entries
 wallet_name_entry = Entry(width=35, bg=BLACK, fg=GREEN);
 wallet_name_entry.focus();
