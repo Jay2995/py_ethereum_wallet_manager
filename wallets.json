@@ -1,0 +1,42 @@
+{
+    "a": {
+        "wallet usecase": "w",
+        "wallet address": "0x01ff5b0b8C623933A3B715e96b0728BD67f47D14",
+        "wallet private-key": "0xd3710283cc2959b436eecff78cc81769720765489c398e4801299492b8400430"
+    },
+    "b": {
+        "wallet usecase": "b",
+        "wallet address": "0x4cdD573D0AfAB14a644736e2AD9c49D7AE7d6E07",
+        "wallet private-key": "0x07b7603f204e69d02126c0c6b9be13de58b171c672263f53cc24f22a46e5147c"
+    },
+    "c": {
+        "wallet usecase": "c",
+        "wallet address": "0xB01DE2ec4782A27c2Cf3705BC3e13c51bfc4930d",
+        "wallet private-key": "0xa3d6b8458e9b545be310f4053c8781b733f1d2c4c2f4e0ec146fa851bc34e040"
+    },
+    "aa": {
+        "wallet usecase": "aaa",
+        "wallet address": "0x97f002E24d2f002af75418EEe29F05D36946d97d",
+        "wallet private-key": "0x8a93804296886bc08892c42c2918132a73ae264cdda7747bb409afe883700168"
+    },
+    "23232": {
+        "wallet usecase": "32323",
+        "wallet address": "0xF1C5b424469C90dc599C108982094BF1C907e27D",
+        "wallet private-key": "0x9b75aeea8f234b69a5c04bda230f25e2032e9099f3f4fe17466b2d7fe4db591e"
+    },
+    "2323": {
+        "wallet usecase": "23232323",
+        "wallet address": "0x51CfaD5d5118D6Eb3d3A320507fEb9bFDbC6Eb9E",
+        "wallet private-key": "0xc6db31828e60d1390de302c2e79f85426b54c78287fda1b7874bd877fd2327ac"
+    },
+    "121212212": {
+        "wallet usecase": "12121212",
+        "wallet address": "0xf1474c4D4472156fCE7D397C135D7441f3211f87",
+        "wallet private-key": "0xd2bd7a140466e9faabae3138e514514a1c36fcf04274abeddeb1654d514789f6"
+    },
+    "nigger": {
+        "wallet usecase": "niggering",
+        "wallet address": "0xf284Af63b1e256D92185f68aDA273E950Fd59eFF",
+        "wallet private-key": "0xff3139dadbf8f89548e533e2bdf3367bad651db7ee547c56550d3e708569846f"
+    }
+}

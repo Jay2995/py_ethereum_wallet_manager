@@ -12,5 +12,4 @@ def generate_ethereum_wallet():
 
     }
 
-    return wallet_info;
-
+    return wallet_info

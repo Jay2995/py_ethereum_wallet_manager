@@ -3,6 +3,7 @@ from wallet_generator import *
 import csv;
 from tkinter import messagebox;
 import pyperclip;
+import json;
 
 BLACK = '#000000';
 GREEN = "#355E3B";
@@ -23,7 +24,7 @@ def clear():
     wallet_PK_result.config(text='');
     wallet_name_entry.delete(0,'end');
     wallet_usecase_entry.delete(0,'end');
-
+ 
 
 
 # # ---------------------------- SAVE WALLET ------------------------------- #
@@ -32,14 +33,32 @@ def add_wallet():
     wallet_usecase_text = wallet_usecase_entry.get();
     wallet_address_text = wallet_address_result.cget('text'); 
     wallet_PK_text = wallet_PK_result.cget('text'); 
+    new_data = {
+         wallet_name_text:{
+              "wallet usecase": wallet_usecase_text,
+              "wallet address": wallet_address_text,
+              "wallet private-key": wallet_PK_text,
+         }
+    }
 
     if len(wallet_name_text) == 0 or len(wallet_usecase_text) == 0 or len(wallet_address_text) == 0 or len(wallet_PK_text) == 0:
         messagebox.showerror(title="ERROR", message="missing fields");
     else:
-        is_ok = messagebox.askokcancel(title=wallet_name_text, message=f"Verify data: \n{wallet_name_text}, {wallet_usecase_text} \nIs it ok to save?")
-        if is_ok:
-            with open('wallets.txt', mode='a') as file:
-                file.write(f"Wallet Name: {wallet_name_text}, Wallet use-case: {wallet_usecase_text}, Wallet address: {wallet_address_text}, Wallet Pk: {wallet_PK_text} \n")
+        # is_ok = messagebox.askokcancel(title=wallet_name_text, message=f"Verify data: \n{wallet_name_text}, {wallet_usecase_text} \nIs it ok to save?");
+        # if is_ok:
+        try:
+            with open('wallets.json', mode='r') as file:
+                    data = json.load(file);        
+        except FileNotFoundError:
+            with open("wallets.json", mode= 'w') as file:
+                    json.dump(new_data, file, indent=4) 
+                    # file.write(f"Wallet Name: {wallet_name_text}, Wallet use-case: {wallet_usecase_text}, Wallet address: {wallet_address_text}, Wallet Pk: {wallet_PK_text} \n")
+        else:
+            data.update(new_data);
+            with open("wallets.json", "w") as file:
+                 json.dump(data, file, indent=4);
+        
+        finally:
             clear();
 
 # ---------------------------- UI SETUP ------------------------------- #
